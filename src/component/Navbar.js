@@ -41,7 +41,7 @@ export default function Navbar(props) {
     <div>
       <div className="navbar ">
         <div className="logo">
-        <Link to="/" className='logoName' style={{textDecoration:"none",color:"#414042"}} > <h1 >Foodie</h1></Link>
+        <Link to="/" className='logoName' style={{textDecoration:"none",color:"#414042"}} > <h1 className='text-2xl select-none hover:scale-110 ease-in duration-150' >Foodie</h1></Link>
         </div>
         <div className="items">
             <ul className="itemlist">

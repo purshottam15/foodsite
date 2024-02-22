@@ -12,7 +12,7 @@ const AdminAuth=async(req,res,next)=>{
     
         let user= await jwt.verify(token,privatekey);
        
-       if(user.user.email==="puruushottammaheshwari15@gmail.com"){
+       if(user.user.email==="admin@mail.com"){
         next()
        }
        else{
