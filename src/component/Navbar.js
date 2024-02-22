@@ -39,14 +39,14 @@ export default function Navbar(props) {
   },[cart])
   return (
     <div>
-      <div className="navbar ">
+      <div className="navbar font-serif text-2xl ">
         <div className="logo">
         <Link to="/" className='logoName' style={{textDecoration:"none",color:"#414042"}} > <h1 className='text-2xl select-none hover:scale-110 ease-in duration-150' >Foodie</h1></Link>
         </div>
-        <div className="items">
+        <div className="items ">
             <ul className="itemlist">
-               <li ><Link className='actualItem' to="/"> Home</Link></li>
-                <li >
+               <li className='hover:scale-110 ease-in duration-300' ><Link className='actualItem ' to="/"> Home</Link></li>
+                <li className='hover:scale-110 ease-in duration-300'>
                  <Link className='actualItem' to="/food"> Food</Link>
                    
                 </li>

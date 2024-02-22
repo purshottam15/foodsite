@@ -45,7 +45,7 @@ useEffect(()=>{
         <h1 className='text-2xl tracking-normal' style={{textAlign:'center'}}>Explore the Delicious</h1>
 
         <div className="foodExplore">
-         <div className='flex gap-2 mx-auto lg:flex-nowrap sm:flex-wrap md:flex-wrap'>
+         <div className='flex gap-2 mx-auto flex-col lg:flex-row'>
     
          <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
   <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-80">

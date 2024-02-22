@@ -5,6 +5,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigate, useNavigate } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -26,12 +27,13 @@ export default function Food(props) {
 
 
   const makeAlert=()=>{
-    setMessage("Item added to cart")
-    SetAlert(true)
-    setTimeout(()=>{
-      SetAlert(false)
+    // setMessage("Item added to cart")
+    // SetAlert(true)
+    // setTimeout(()=>{
+    //   SetAlert(false)
 
-    },1000)
+    // },1000)
+    toast.success('Item Added to cart!',{duration:2000});
   }
 
   const fetchFood = async () => {
