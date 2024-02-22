@@ -22,68 +22,63 @@ export default function Order() {
 
   useEffect(() => {
     fetchOrder();
-    
   }, []);
-  const reverseArray=[...food].reverse();
+
+  const reverseArray = [...food].reverse();
 
   return (
     <div>
       <div className="container">
-      { reverseArray.length>0&& <h1 className='my-4' style={{textAlign:"center"}}>Order</h1>}
+        
 
         {reverseArray.map((data) => (
-  <div key={data.date} className="card my-4">
-    <div className="card-header">
-      <h2 className="card-title">
-        <button
-          className="btn"
-          type="button"
-          data-bs-toggle="collapse"
+          <div key={data.date} className="card my-4">
+            <div className="card-header">
+              <h2 className="card-title">
+                <button
+                  className="btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  aria-expanded="true"
+                >
+                  {data.date}
+                  <p className='my-2 text-green-500'>Status-{data.status}</p>
+                </button>
+              </h2>
+            </div>
           
-          aria-expanded="true"
-        >
-          {data.date}
-          <p className='my-2' style={{ color: "green",textDecoration:"none" }}>Status-{data.status}</p>
-        </button>
-      </h2>
-    </div>
-    <div
-      id={`collapse_${data.date}`}
-      className="collapse show"
-    >
-      <div className="card-body">
+              
+                <div>
+                  <table className="table-auto w-100 ">
+                    <thead className="bg-gray-800 text-white text-lg">
+                      <tr>
+                        <th className='px-4 py-2'>#</th>
+                        <th className='px-4 py-2'>Food Name</th>
+                        <th className='px-4 py-2'>Quantity</th>
+                        <th className='px-4 py-2'>Price</th>
+                        <th className='px-4 py-2'>Total Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    
+                      {data.foodItem.map((item, index) => (
+                        <tr key={index}>
+                          <td className='px-4 py-2'>{index + 1}</td> {/* Adjust index for static rows */}
+                          <td className='px-4 py-2'>{item.foodName}</td>
+                          <td className='px-4 py-2'>{item.quantity}</td>
+                          <td className='px-4 py-2'>{item.price}</td>
+                          <td className='px-4 py-2'>{item.price * item.quantity}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+           
        
-        <div>
-          <table className="table table-hover my-0 table-sm">
-            <thead  className="thead-dark fs-4 table_head ">
-              <tr>
-                <th className='table_head' scope="col">#</th>
-                <th className='table_head' scope="col">Food Name</th>
-                <th className='table_head' scope="col">Quantity</th>
-                <th className='table_head' scope="col">Price</th>
-                <th className='table_head' scope="col">Total Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.foodItem.map((item, index) => (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{item.foodName}</td>
-                  <td>{item.quantity}</td>
-                  <td>{item.price}</td>
-                  <td>{item.price * item.quantity}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        ))}
       </div>
-    </div>
-  </div>
-))}
-
-      </div>
-    { !food.length>0&& <h1 className='my-4' style={{textAlign:"center"}}>No order</h1>}
+      {!food.length > 0 && <h1 className='my-4 text-center'>No order</h1>}
     </div>
   );
 }

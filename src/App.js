@@ -41,6 +41,33 @@ function App() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+
+
+
+
+
+
+  // getting profile Info 
+  const[profile,setprofile]=useState([]) 
+  const info=async()=>{
+    
+         let res = await fetch('http://localhost:5000/auth/getuser', {
+           method: 'GET',
+           headers: {
+             'Content-Type': 'application/json',
+ 
+             'auth-token': localStorage.getItem('token'),
+           },
+         });
+   
+         let data = await res.json();
+         setprofile(data.name)
+     
+ }
+ useEffect(()=>{
+ info();
+ },[])
   
  
   return (
@@ -63,7 +90,7 @@ function App() {
             <Route exact path="/order/payment" element={<Payment/>} />
             <Route exact path="/order/success" element={<OrderSuccess/>} />
             <Route exact path="/user/order" element={<Order/>} />
-            <Route exact path="/profile" element={<Profile/>} />
+            <Route exact path="/profile" element={<Profile Profile={profile}/>} />
             <Route exact path="/Adminorder" element={<AdminOrder/>} />
 
            

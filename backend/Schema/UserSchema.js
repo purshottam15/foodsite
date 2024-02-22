@@ -22,9 +22,14 @@ const Userschema=mongoose.Schema({
         default:Date.now
     },
     address:{
-        
-    }
-   
+        type:[Object]
+      },
+     
+    role: {
+        type:String,
+        default:"user"
+    
+      },
 })
 
 const User=mongoose.model('User',Userschema)
