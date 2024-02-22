@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './component/Navbar';
 import Home from './component/Home';
-
+import  { Toaster } from 'react-hot-toast';
 import {
   BrowserRouter as Router,
   Switch,
@@ -46,7 +46,8 @@ function App() {
   return (
   
     <div className="App">
-     
+       
+       
         <Router>
     {IsMobile?<MobileNav/>:<Navbar />} 
     
@@ -70,7 +71,7 @@ function App() {
           </Routes>
           <Footer/>
      </Router>
-    
+     <Toaster/>
     </div>
   
   );
