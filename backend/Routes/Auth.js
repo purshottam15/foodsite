@@ -91,6 +91,21 @@ router.post('/login', async (req, res) => {
 
 
 })
+router.put('/updateuser:id',async(req,res)=>{
+    let id=req.params;
+    let user=req.body;
+
+    let updatedUser=await User.findOneAndUpdate({id:id},user,{new:true})
+    if(!updateUser){
+        res.json({message:"Some error",status:401})
+        return;
+
+    }
+    res.json({
+        message:"User successfully updated",
+        status:200,
+    })
+})
 
 
 router.get('/getuser', Authentication, async (req, res) => {
