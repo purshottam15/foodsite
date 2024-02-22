@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+}
+
+body {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  background-color: ;
+
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1.4rem;
+
+  color: #414042;
+  border: #414042 2px solid;
+
+
+
+}
+
+.logo h1 {
+  font-family: 'Pacifico', cursive;
+  margin: 0rem 1rem;
+  cursor: pointer;
+
+
+}
+
+.logo {
+  margin-right: 35rem;
+}
+
+.items {
+  margin: auto;
+  cursor: pointer;
+}
+
+.itemlist {
+  display: flex;
+
+}
+
+.itemlist li {
+  list-style: none;
+}
+
+.actualItem {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 0rem 2rem;
+  color: #414042;
+}
+
+
+
+/* swiper 
+ */
+.Swipephoto {
+  height: 31rem;
+  width: 100%;
+
+}
+
+.swipe {
+  margin: 2rem 0rem;
+
+}
+
+.desc {
+  background-color: black;
+  color: #fff;
+  padding: 4rem;
+  width: 100%;
+
+}
+
+
+/* Food Explore section  */
+.explore {
+  margin: 3rem 0rem;
+}
+
+.foodExplore {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.foodcard {
+  width: 90%;
+  border: #414042 2px solid;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.foodcard img {
+  width: 100%;
+}
+
+.foodcard h4 {
+  text-align: center;
+}
+
+
+
+/* registration css------------------
+ */
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #84fab0;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+}
+
+.gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #84fab0;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+
+
+/* food css /
+   */
+.mainFood {
+  margin-top: 4rem;
+}
+
+.explore1 {
+  margin: 3rem 0rem;
+}
+
+.foodcard1 {
+  width: 90%;
+  border-radius: 20px;
+  border: 0.4px solid;
+
+
+  text-align: center;
+}
+
+.foodcard1 img {
+  width: 100%;
+  height: 13rem;
+
+  border-radius: 20px;
+}
+
+.foodcard1 h4 {}
+
+.foodContainer {
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  margin-top: -2rem;
+}
+
+.quantity {
+  width: 3rem;
+  margin: 1rem;
+}
+
+
+
+/* checkout cart css 
+   */
+.checkOutCart {
+  width: 70%;
+  border: #414042 1px solid;
+  height: 27rem;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px;
+
+}
+
+
+
+/* profile------------
+   */
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.profileMain {
+  width: 100%;
+  height: 20rem;
+  background-color: #db4242;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.Profile_name {
+  margin: 3rem 0rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+
+  .swipe img {
+    height: 30rem;
+  }
+  .desc{
+    width: 100%;
+    padding: 1rem;
+  }
+  .desc h5{
+    font-size: 15px;
+  }
+  .explore h1{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .explore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .foodExplore{
+    grid-template-columns: 1fr;
+    align-self: center;
+    
+    width: 100%;
+  }
+  .foodcard{
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .table_head{
+    font-size: 1rem;
+  }
+  .cart_container{
+    width: 90%;
+    height: auto;
+  }
+
+
+
+
+}
